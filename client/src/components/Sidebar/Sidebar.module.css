@@ -1,16 +1,25 @@
 .sidebar {
     background-color: #141414;
     color: #FFF ;
-    padding: 32px 24px;
+    padding: 32px 24px 32px 24px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    height: 95vh;   /* Do poprawy */
     font-weight: 500;
+    min-width: 40px;
+    width: 40px;
+    transition: width 0.2s ease;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;    
 }   
+.sidebar p {
+    text-wrap: nowrap;
+}
 
 .active {
-    width: 14%;
+    width: 200px;
 }
 
 .burgerMenu {
@@ -25,18 +34,21 @@
     opacity: 0.7;
 }
 
-.askAIContainer {
+.iconOptionContainer {
     display: flex;
     gap: 8px;
     align-items: center;
     font-size: 20px;
 }
-.askAIContainer img{
+.iconOptionContainer img{
     height: 32px;
     width: 32px;
 }
-.askAIContainer p {
+.iconOptionContainer p {
     margin: 0px;
+}
+#settings {
+    margin-top: auto;
 }
 
 
