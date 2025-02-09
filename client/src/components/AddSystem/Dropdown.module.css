@@ -11,6 +11,7 @@
     gap: 24px;
     padding: 16px;
     min-width: 150px;
+    max-width: 231px;
     width: 100%;
     border-radius: 8px;
     background-color: #F5F5F5;
@@ -94,16 +95,30 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     transition: background-color 0.15s;
+    padding: 8px 8px;
 }
 .addContainer p {
     font-size: 16px;
     margin: 0px;
     color: #8F8F8F;
-    padding: 8px 16px;
+    padding: 0px 8px;
 }
 .addContainer:hover {
     background-color: #eeeeee;
 }
 .addContainer:active {
     background-color: #e7e7e7;
+}
+
+.addContainer input {
+    border: none;
+    background-color: #ffffff;
+    font-size: 16px;
+    padding: 8px 8px;
+    border-radius: 4px;
+    outline-width: 1px;
+    outline-color: #acacac;
+}
+.addContainer input::placeholder {
+    color: #8F8F8F;
 }

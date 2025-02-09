@@ -10,6 +10,8 @@
     padding: 32px 24px;
     margin-left: 88px;
     transition: margin-left 0.2s ease;
+    max-width: 1000px;
+    width: 100%;
 }
 .shifted {
     margin-left: 248px;
@@ -24,4 +26,54 @@ h1 {
     font-size: 48px;
     font-weight: 1000;
     margin: 0px 0px 24px 0px;
+}
+
+
+.tasksContainer {
+    padding: 16px 0px 0px 0px;
+}
+
+.task {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    padding: 12px;
+    margin-top: 8px;
+    border-bottom: 1px #8F8F8F solid;
+    transition: background-color 0.15s;
+    user-select: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+.task:hover {
+    background-color: #fafafa;
+}
+.task:active {
+    background-color: #f7f7f7;
+}
+.task img {
+    transition: opacity 0.15s;
+}
+.task img:hover {
+    opacity: 0.8;
+}
+.task img:active {
+    opacity: 0.7;
+}
+
+.checked {
+    text-decoration: line-through;
+    text-decoration-color: rgba(36, 36, 36, 0.7);
+    text-decoration-color: #242424;
+}
+
+.taskContent {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskContent p {
+    margin: 0px;
 }

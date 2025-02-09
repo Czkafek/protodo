@@ -25,7 +25,7 @@ function Sidebar({ isActive, setIsActive}) {
             <div className={styles.foldersContainer}>
                 {
                     folders.map((folder, index) => {
-                        return <p>{folder}</p>
+                        return <p key={folder}>{folder}</p>
                     })
                 }
                 <p className={styles.addFolder} onClick={handleAddFolder} >Add +</p>
