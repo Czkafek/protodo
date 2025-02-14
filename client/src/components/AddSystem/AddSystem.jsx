@@ -14,7 +14,7 @@ function AddSystem({tasks, setTasks, inputValue, setInputValue, activeCategory, 
     const addTask = () => {
         const newTask = inputValue.trim();
         if(newTask)
-            setTasks([...tasks, {name: newTask, isDone: false}]);
+            setTasks([...tasks, {name: newTask, isDone: false, category: activeCategory}]);
     };
 
     const handleChange = (e) => {

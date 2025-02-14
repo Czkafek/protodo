@@ -20,14 +20,14 @@ function Home() {
     const [isSidebarActive, setIsSidebarActive] = useState(false);
 
     const [tasks, setTasks] = useState([
-        { name: "Zrobić zakupy", isDone: false },
-        { name: "Napisać raport", isDone: true },
-        { name: "Posprzątać pokój", isDone: false },
-        { name: "Odpowiedzieć na e-maile", isDone: false },
-        { name: "Uczyć się do testu", isDone: true },
-        { name: "Zadzwonić do rodziców", isDone: true },
-        { name: "Przygotować prezentację", isDone: false },
-        { name: "Pójść na siłownię", isDone: false }
+        { name: "Zrobić zakupy", isDone: false, category: "Work" },
+        { name: "Napisać raport", isDone: true, category: "Very Important" },
+        { name: "Posprzątać pokój", isDone: false, category: "Personal" },
+        { name: "Odpowiedzieć na e-maile", isDone: false, category: "Work" },
+        { name: "Uczyć się do testu", isDone: true, category: "Important" },
+        { name: "Zadzwonić do rodziców", isDone: true, category: "Personal" },
+        { name: "Przygotować prezentację", isDone: false, category: "Work" },
+        { name: "Pójść na siłownię", isDone: false, category: "Personal" }
       ]);
 
     const [categories, setCategories] = useState(["Work", "Very important", "School", "Important", "Personal"]);
@@ -61,7 +61,7 @@ function Home() {
             <Reorder.Group values={tasks} onReorder={setTasks} className={styles.tasksContainer}>
                 {
                     tasks.map((task, index) => {
-                        const {name, isDone} = task;
+                        const {name, isDone, category} = task;
 
                         return <Reorder.Item 
                                     value={task} 
@@ -75,11 +75,15 @@ function Home() {
                                 <p className={isDone ? styles.checked : ""}>{name}</p>
                                 <img src={downArrowIcon} alt="" />
                             </div>
-                            <img src={binIcon} alt="bin" 
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    handleDelete(task, index);}}
-                            />
+                            <div className={styles.taskRight}>
+                                <p>{category}</p>
+                                <img src={binIcon} alt="bin" 
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleDelete(task, index);}}
+                                />
+                            </div>
+                            
                         </Reorder.Item>
                     })
                 }

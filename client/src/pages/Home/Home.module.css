@@ -52,6 +52,7 @@ h1 {
     background-color: #f7f7f7;
 }
 .task img {
+    width: 20px;
     transition: opacity 0.15s;
 }
 .task img:hover {
@@ -74,6 +75,28 @@ h1 {
     justify-content: center;
 }
 
+.taskContent img {
+    width: 20px;
+    height: 20px;
+}
+
 .taskContent p {
+    font-size: 16px;
     margin: 0px;
+}
+
+.taskRight {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.taskRight p {
+    font-size: 12px;
+    margin: 0px;
+
+    padding: 2px 8px;
+    background-color: #FF7E7E;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
 }
