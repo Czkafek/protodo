@@ -1,0 +1,54 @@
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+    position: relative;
+}
+
+.inputContainer {
+    display: flex;
+    gap: 4px;
+    align-items: end;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+.inputContainer textarea {
+    width: 100%;
+    min-height: 50px;
+    max-height: 322px !important;
+    padding: 8px 16px 10px 16px;
+    font-size: 16px;
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    outline-width: 1px;
+    outline-color: #e4e4e4;
+    box-sizing: border-box;
+    line-height: 200%;
+    resize: none;
+    font-family: Inter !important;
+    field-sizing: content;
+}
+.inputContainer textarea::placeholder {
+    color: #8F8F8F;
+}
+
+.inputContainer button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #242424;
+    border-radius: 8px;
+    transition: opacity 0.1s;
+}
+.inputContainer button:hover {
+    opacity: 0.9;
+}
+.inputContainer button:active {
+    opacity: 0.8;
+}

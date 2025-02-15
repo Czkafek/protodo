@@ -13,6 +13,7 @@ import downArrowIcon from '../../assets/more-arrow.svg'
 
 import Sidebar from '../../components/Sidebar/Sidebar';
 import AddSystem from '../../components/AddSystem/AddSystem';
+import Chat from '../../components/Chat/Chat';
 
 
 function Home() {
@@ -88,6 +89,9 @@ function Home() {
                     })
                 }
             </Reorder.Group>
+        </div>
+        <div className={styles.chatContent}>
+            <Chat />
         </div>
     </div>
 }
