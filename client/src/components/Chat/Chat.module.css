@@ -1,16 +1,17 @@
 .chatContainer {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: start;
     height: 100%;
     position: relative;
+    overflow: hidden auto;
 }
 
 .inputContainer {
     display: flex;
     gap: 4px;
     align-items: end;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
@@ -51,4 +52,37 @@
 }
 .inputContainer button:active {
     opacity: 0.8;
+}
+
+
+.userMessage, .aiMessage {
+    display: flex;
+    justify-content: flex-end;
+    margin: 18px 0px 36px 0px;
+}
+.userMessage {
+    justify-content: flex-end;
+}
+.aiMessage {
+    justify-content: flex-start;
+}
+.aiMessage p {
+    word-wrap: break-word;
+    width: 75%;
+    padding: 8px 16px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 200%;
+    font-family: Inter;
+}
+.userMessage p{
+    word-wrap: break-word;
+    background-color: #F5F5F5;
+    width: 75%;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 200%;
+    font-family: Inter;
 }
