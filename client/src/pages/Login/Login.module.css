@@ -1,0 +1,68 @@
+.registerPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 32px;
+    max-width: 330px;
+    width: 100%;
+    text-align: center;
+}
+.registerContainer h1, .registerContainer p {
+    margin: 0px;
+}
+
+.formGroup {
+    font-size: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    padding: 12px;
+    border: 2px #EBEBEB solid;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline-color: #bbbbbb;
+}
+
+.formOptions {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.formOptions button {
+    margin-bottom: 24px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0px;
+    width: 100%;
+    font-size: 16px;
+    background-color: #242424;
+    color: #fff;
+    font-weight: 500;
+    transition: opacity 0.15s;
+}
+.formOptions button:hover {
+    opacity: 0.9;
+}
+.formOptions button:active {
+    opacity: 0.8;
+}
+
+.link {
+    margin: 0px 4px;
+    color: #3878ED;
+    text-decoration: underline;
+}
+
+.error {
+    font-size: 14px;
+    color: #E22727;
+    padding-bottom: 8px;
+}
