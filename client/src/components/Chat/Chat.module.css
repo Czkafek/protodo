@@ -4,18 +4,16 @@
     justify-content: start;
     height: 100%;
     position: relative;
-    overflow: hidden auto;
+    overflow-y: auto;
 }
-
 .inputContainer {
     display: flex;
     gap: 4px;
-    align-items: end;
-    position: fixed;
-    left: 0;
-    right: 0;
+    position: sticky;
     bottom: 0;
     z-index: 999;
+    background-color: #fff;
+    padding: 8px 0px 0px 0px;
 }
 
 .inputContainer textarea {
@@ -54,11 +52,15 @@
     opacity: 0.8;
 }
 
+.messagesContainer {
+    flex: 1;
+}
+
 
 .userMessage, .aiMessage {
     display: flex;
     justify-content: flex-end;
-    margin: 18px 0px 36px 0px;
+    margin: 18px 8px 36px 0px;
 }
 .userMessage {
     justify-content: flex-end;
@@ -86,3 +88,20 @@
     line-height: 200%;
     font-family: Inter;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #DDD;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #242424;
+    border-radius: 100px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #535353;
+  }
