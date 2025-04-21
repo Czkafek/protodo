@@ -28,3 +28,6 @@ pids
 ._*
 .Spotlight-V100
 .Trashes
+
+# Pub and Priv keys
+*.pem
